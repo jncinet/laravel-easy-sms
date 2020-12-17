@@ -24,7 +24,6 @@ return [
             'access_key_id' => env('ALIYUN_ACCESS_KEY_ID', ''),
             'access_key_secret' => env('ALIYUN_ACCESS_KEY_SECRET', ''),
             'sign_name' => env('ALIYUN_SIGN_NAME', ''),
-            'register_tpl' => env('ALIYUN_REGISTER_TPL', ''),
         ],
         'aliyunrest' => [
             'app_key' => env('ALIYUNREST_APP_KEY', ''),

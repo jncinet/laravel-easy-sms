@@ -27,5 +27,7 @@ class EasySmsServiceProvider extends ServiceProvider implements DeferrableProvid
                 __DIR__ . '/../config/easy-sms.php' => config_path('easy-sms.php')
             ], 'laravel-easy-sms');
         }
+
+        $this->mergeConfigFrom(__DIR__.'/../config/easy-sms.php', 'easy-sms');
     }
 }
