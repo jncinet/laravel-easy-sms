@@ -1,0 +1,32 @@
+{
+  "name": "jncinet/laravel-easy-sms",
+  "description": "laravel easy sms.",
+  "keywords": [
+    "laravel",
+    "easy",
+    "sms"
+  ],
+  "homepage": "https://www.qihucms.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "zhangye",
+      "email": "y@qilephp.com"
+    }
+  ],
+  "require": {
+    "overtrue/easy-sms": ">=1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jncinet\\LaravelEasySms\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Jncinet\\LaravelEasySms\\EasySmsServiceProvider"
+      ]
+    }
+  }
+}
