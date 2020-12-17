@@ -10,7 +10,7 @@ class EasySmsServiceProvider extends ServiceProvider implements DeferrableProvid
 {
     public function provides()
     {
-        return [EasySms::class];
+        return [EasySms::class, 'easy-sms'];
     }
 
     public function register()
@@ -18,6 +18,8 @@ class EasySmsServiceProvider extends ServiceProvider implements DeferrableProvid
         $this->app->singleton(EasySms::class, function () {
             return new EasySms(config('easy-sms'));
         });
+
+        $this->app->alias(EasySms::class, 'easy-sms');
     }
 
     public function boot()
@@ -28,6 +30,6 @@ class EasySmsServiceProvider extends ServiceProvider implements DeferrableProvid
             ], 'laravel-easy-sms');
         }
 
-        $this->mergeConfigFrom(__DIR__.'/../config/easy-sms.php', 'easy-sms');
+        $this->mergeConfigFrom(__DIR__ . '/../config/easy-sms.php', 'easy-sms');
     }
 }
